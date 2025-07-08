@@ -21,7 +21,7 @@ class SelectionSort {
                     small=j;
                 }
             }
-
+            //after getting smallest we swap with i
             int temp=arr[small];
             arr[small]=arr[i];
             arr[i]=temp;
