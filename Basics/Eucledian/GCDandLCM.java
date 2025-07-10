@@ -28,14 +28,30 @@ public class GCD {
         // return a as the GCD
         return a;
     }
+    public static int findLcm(int a, int b) {
+    int num = (a > b) ? a : b; // Start from max of a and b
+
+    while (true) {
+        if (num % a == 0 && num % b == 0) {
+            return num; // First number divisible by both
+        }
+        num++; // Try next number
+    }
+}
+
+
+    
 
     public static void main(String[] args) {
         int n1 = 20, n2 = 15;
 
         // Find the GCD of n1 and n2
         int gcd = findGcd(n1, n2);
+        int lcm = findLcm(n1, n2);
+
 
         System.out.println("GCD of " + n1 + " and " + n2 + " is: " + gcd);
+        System.out.println("LCM of " + n1 + " and " + n2 + " is: " + lcm);
     }
 }
     
