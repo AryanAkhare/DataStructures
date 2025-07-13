@@ -14,7 +14,7 @@ import java.util.*;
 //     }
 // }
 
-import java.util.*;
+
 
 class Divisor {
     public static void divisors(int n){

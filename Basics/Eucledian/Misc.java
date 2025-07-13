@@ -55,6 +55,7 @@ class Misc {
         // System.out.print(fact(num));
         System.out.print(sumOfDigits(num)+"\n");
         fibonacci(num);
+        sc.close();
 
     }
 }

@@ -1,4 +1,4 @@
-import java.util.*;
+
 
 class SelectionSort {
     public static void printArray(int arr[]) {

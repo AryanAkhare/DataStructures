@@ -1,5 +1,5 @@
                                 
-public class GCD {
+public class GCDandLCM {
     // Continue loop as long as both
     // a and b are greater than 0
     public static int findGcd(int a, int b) {
