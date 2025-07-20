@@ -32,6 +32,8 @@ public class RemoveDuplicates {
         }
         return i+1;
     }
+
+    
     public static void main(String[] args) {
         int a[]={1,1,2};
         int b[]={1,2,2,3,3,4,4,5,5,6,7};
