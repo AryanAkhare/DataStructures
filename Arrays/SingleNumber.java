@@ -50,7 +50,7 @@ public class SingleNumber {
         //2 values of each and one single value 
         //if we xor throught loop we get answer
         int xor=0;
-        for(int i=0 ; i<n ; i++){
+        for(int i=0 ; i<arr.length ; i++){
             xor^=arr[i];
         }
         return xor;
