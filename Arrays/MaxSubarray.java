@@ -23,6 +23,20 @@ public class MaxSubarray {
 
         return maxi;
     }
+    public static int Kadane(int[] nums){
+        int sum=0;
+        int maxi=Integer.MIN_VALUE;
+        for(int i=0;i<nums.length;i++){
+            sum+=nums[i];
+            if(sum>maxi){
+                maxi=sum;
+            }
+            if(sum<0){
+                sum=0;
+            }
+        }
+        return maxi;
+    }
 
     // Function to print the subarray giving the maximum sum
     public static void printMaxSubArray(int[] nums) {
@@ -62,7 +76,7 @@ public class MaxSubarray {
 
     public static void main(String[] args) {
         int arr[] = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
-        System.out.println("Max sum: " + maxSubArray(arr)); // Output: 6
+        System.out.println("Max sum: " + Kadane(arr)); // Output: 6
         printMaxSubArray(arr);                              // Output: [4, -1, 2, 1]
     }
 }
