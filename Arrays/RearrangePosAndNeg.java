@@ -55,7 +55,7 @@ public class RearrangePosAndNeg {
             else neg.add(num);
         }
 
-        int n = nums.length;
+       
         int i = 0, p = 0, ng = 0;
         while (p < pos.size() && ng < neg.size()) {
             nums[i++] = pos.get(p++);

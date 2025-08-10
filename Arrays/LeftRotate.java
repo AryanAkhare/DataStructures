@@ -1,7 +1,5 @@
 package Arrays;
 
-import static java.util.Arrays.toString;
-import static java.util.Collections.reverse;
 
 import java.util.Arrays;
 

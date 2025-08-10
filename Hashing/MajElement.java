@@ -1,49 +1,54 @@
 package Hashing;
+
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class MajElement {
-    // Get all elements that appear more than n/3 times
-    public static int[] majorityElement(int[] arr) {
-        HashMap<Integer, Integer> map = new HashMap<>();
-        int n = arr.length;
-        ArrayList<Integer> solution = new ArrayList<>();
 
-        // Count frequencies
-        for (int i = 0; i < n; i++) {
-            if (map.containsKey(arr[i])) {
-                map.put(arr[i], map.get(arr[i]) + 1); //
-            } else {
-                map.put(arr[i], 1);
-            }
+    /**
+     * Function to find all elements in the array that appear more than ⌊n/3⌋ times.
+     * 
+     * Intuition:
+     * - We need to count how many times each element appears in the array.
+     * - If an element appears more than n/3 times, it qualifies for our result list.
+     * - Using a HashMap allows O(1) average time for counting each element.
+     * - After counting, we iterate over the map to collect qualifying elements.
+     * 
+     * Time Complexity: O(n)  → One pass for counting, one pass for collecting.
+     * Space Complexity: O(n) → Storing counts in the map.
+     */
+    public List<Integer> majorityElement(int[] nums) {
+        HashMap<Integer, Integer> map = new HashMap<>(); // Stores element -> frequency
+        int n = nums.length;
+        List<Integer> solution = new ArrayList<>();
+
+        // Count frequency of each element
+        for (int num : nums) {
+            // Increment count if already present, else start with 1
+            map.put(num, map.getOrDefault(num, 0) + 1);
         }
 
-        // Check if frequency > n/3
-        ArrayList<Integer> keys = new ArrayList<>(map.keySet());
-        for (int i = 0; i < keys.size(); i++) {
-            int key = keys.get(i);
+        // Collect elements that appear more than n/3 times
+        for (int key : map.keySet()) {
             if (map.get(key) > n / 3) {
                 solution.add(key);
             }
         }
 
-        // Convert result to int[]
-        int[] result = new int[solution.size()];
-        for (int i = 0; i < solution.size(); i++) {
-            result[i] = solution.get(i);
-        }
-
-        return result;
+        return solution;
     }
 
-    // Main method to test
+    // Main method to test the function
     public static void main(String[] args) {
         int[] arr = {1, 2, 1, 2, 3, 2, 1, 1, 1, 2};
-        int[] result = majorityElement(arr);
+
+        MajElement obj = new MajElement(); // Create object to call non-static method
+        List<Integer> result = obj.majorityElement(arr);
+
         System.out.print("Elements > n/3 times: ");
         for (int num : result) {
             System.out.print(num + " ");
         }
     }
 }
-

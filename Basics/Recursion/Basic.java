@@ -1,4 +1,6 @@
+
 import java.util.*;
+
 class Basic{
     public static void printNtimes(int n){
         if(n==0) {
