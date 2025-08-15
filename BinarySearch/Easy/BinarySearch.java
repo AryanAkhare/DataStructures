@@ -1,3 +1,3 @@
-package BinarySearch.Easy;
+package Easy;
 
 public class BinarySearch{}
