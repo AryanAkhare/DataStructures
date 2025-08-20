@@ -1,4 +1,3 @@
-package Arrays.Neetcode;
 
 public class OddEvenIndex {
     

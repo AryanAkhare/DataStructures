@@ -1,4 +1,3 @@
-package Arrays.Neetcode;
 
 import java.util.Arrays;
 
