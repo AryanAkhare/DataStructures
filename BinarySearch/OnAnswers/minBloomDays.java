@@ -1,4 +1,4 @@
-package Medium;
+package OnAnswers;
 class minBloomDays{
 
     // Function to check if it's possible to make m bouquets in 'day' days

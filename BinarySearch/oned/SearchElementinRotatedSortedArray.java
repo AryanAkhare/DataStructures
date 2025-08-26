@@ -1,4 +1,4 @@
-package Easy;
+package oned;
 
 public class SearchElementinRotatedSortedArray {
     /*

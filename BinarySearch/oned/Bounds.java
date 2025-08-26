@@ -1,4 +1,4 @@
-package Easy;
+package BinarySearch.OneD;
 
 import java.util.Arrays;
 
