@@ -52,4 +52,4 @@ This repository is primarily for personal learning and practice, but if you’d 
 
 1. Clone the repo:  
    ```bash
-   git clone https://github.com/<your-username>/<repo-name>.git
+   git clone https://github.com/AryanAkhare/DataStructures.git
