@@ -1,3 +1,38 @@
-package 1D;
+package oned;
 
-public class BinarySearch{}
+public class BinarySearch {
+    // Standard Binary Search function
+    public static int binarySearch(int[] arr, int target) {
+        int low = 0;
+        int high = arr.length - 1;
+
+        while (low <= high) {
+            int mid = low + (high - low) / 2; // avoid overflow
+
+            if (arr[mid] == target) {
+                return mid; // found target
+            } 
+            else if (arr[mid] < target) {
+                low = mid + 1; // search right half
+            } 
+            else {
+                high = mid - 1; // search left half
+            }
+        }
+        return -1; // target not found
+    }
+
+    // Example usage
+    public static void main(String[] args) {
+        int[] arr = {1, 3, 5, 7, 9, 11};
+        int target = 7;
+
+        int result = binarySearch(arr, target);
+
+        if (result != -1) {
+            System.out.println("Element found at index: " + result);
+        } else {
+            System.out.println("Element not found");
+        }
+    }
+}

@@ -37,7 +37,7 @@ class minBloomDays{
     }
 
     public int minDaysBloom(int[] arr, int k, int m) {
-        int n = arr.length;
+        
 
         int low = findMin(arr);  // smallest bloom day
         int high = findMax(arr); // largest bloom day

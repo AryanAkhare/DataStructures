@@ -1,4 +1,4 @@
-package BinarySearch.OneD;
+package oned;
 
 import java.util.Arrays;
 

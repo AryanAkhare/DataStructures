@@ -1,6 +1,6 @@
 package OnAnswers;
 
-public class nthRoot {
+public class NthRoot {
     
     /**
      * Problem:
@@ -69,7 +69,7 @@ public class nthRoot {
 
     // Example test
     public static void main(String[] args) {
-        nthRoot obj = new nthRoot();
+        NthRoot obj = new NthRoot();
         System.out.println(obj.nthRoot(3, 27)); // 3
         System.out.println(obj.nthRoot(2, 20)); // -1
     }
