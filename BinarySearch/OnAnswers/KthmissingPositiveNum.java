@@ -62,4 +62,9 @@ public class KthmissingPositiveNum {
         }
         return low + k;
     }
+    public static void main(String[] args) {
+      int a[]={2,5,6,7,10};
+      System.out.println(kthmissingPositiveNumOptimal(a));
+    }
 }
+
