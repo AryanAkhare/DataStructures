@@ -22,15 +22,18 @@ public class KthmissingPositiveNum {
       so we increment k to account for the missing numbers shifting further.
     - Else, stop the loop because we've found our answer.
     - Return k.
-    Time Complexity: O(n), because we may traverse the whole array once.
+    Time Complexity: O(n)
     */
 
     public int kthmissingPositiveNumBrute(int arr[], int k) {
         int n = arr.length;
 
         for (int i = 0; i < n; i++) {
-            if (arr[i] <= k) k++;
-            else break;
+            if (arr[i] <= k) {
+                k++;
+            } else {
+                break;
+            }
         }
         return k;
     }
@@ -40,13 +43,12 @@ public class KthmissingPositiveNum {
     -----------------------------------
     - Missing numbers before index mid = arr[mid] - (mid+1).
       Example: if arr[mid] = 7 and mid = 3 → missing = 7 - (3+1) = 3.
-    - If the number of missing numbers up to mid <= k, then the kth missing lies 
-      on the right side, so we move low = mid+1.
-    - Otherwise, move high = mid-1.
-    - At the end, low will give the correct position and the answer is low + k.
+    - If missing <= k → kth missing lies on the right side (low = mid+1).
+    - Else → move left (high = mid-1).
+    - At the end, answer = low + k.
     
-    Time Complexity: O(log n), because we use binary search.
-    Space Complexity: O(1), no extra space used.
+    Time Complexity: O(log n)
+    Space Complexity: O(1)
     */
 
     public int kthmissingPositiveNumOptimal(int arr[], int k) {
@@ -57,14 +59,21 @@ public class KthmissingPositiveNum {
             int mid = low + (high - low) / 2;
             int missing = arr[mid] - (mid + 1);
 
-            if (missing <= k) low = mid + 1;
-            else high = mid - 1;
+            if (missing < k) {
+                low = mid + 1;  // move right
+            } else {
+                high = mid - 1; // move left
+            }
         }
         return low + k;
     }
+
     public static void main(String[] args) {
-      int a[]={2,5,6,7,10};
-      System.out.println(kthmissingPositiveNumOptimal(a));
+        KthmissingPositiveNum obj = new KthmissingPositiveNum();
+        int a[] = {2, 5, 6, 7, 10};
+        int k = 4;
+
+        System.out.println("Brute Force Answer: " + obj.kthmissingPositiveNumBrute(a, k));
+        System.out.println("Optimal Answer    : " + obj.kthmissingPositiveNumOptimal(a, k));
     }
 }
-
