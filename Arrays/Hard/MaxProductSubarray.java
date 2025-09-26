@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.Hard;
 public class MaxProductSubarray {
     public static int brutemaxprosub(int arr[]){
         int n=arr.length;
