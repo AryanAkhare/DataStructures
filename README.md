@@ -11,7 +11,8 @@ It is organized topic-wise to make it easier to navigate and revise.
 - **Basics/** → Fundamental coding problems and concepts  
 - **BinarySearch/** → Binary search problems (easy, medium, hard – structured by subfolders)  
 - **Hashing/** → Problems solved using hashing techniques  
-- **Sorting/** → Sorting algorithms and related problems  
+- **Sorting/** → Sorting algorithms and related problems
+- **Strings/** → Problems related to strings
 
 *(More folders like Trees, Graphs, Dynamic Programming, etc. will be added as the repository grows.)*  
 
