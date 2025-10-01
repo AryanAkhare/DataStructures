@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.Easy;
 // ✅ LeetCode 26 – Remove Duplicates from Sorted Array
 // 📄 Problem (Short):
 // Given a sorted array, remove the duplicates in-place such that each unique element appears only once, and return the new length.

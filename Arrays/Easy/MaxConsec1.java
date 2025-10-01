@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.Easy;
 
 import static java.lang.Math.max;
 

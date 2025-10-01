@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.Medium;
 
 /**
  * Problem: Best Time to Buy and Sell Stock (LeetCode 121)

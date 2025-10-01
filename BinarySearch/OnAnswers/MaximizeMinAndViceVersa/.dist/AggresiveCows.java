@@ -1,4 +1,4 @@
-package MaximizeMinAndViceVersa;
+
 
 import java.util.Arrays;
 

@@ -1,5 +1,6 @@
+package TwoD;
 // Peak Element Problems - TUF Style Solutions
-// Author: Aryan (Following TUF approach)
+// 
 // -------------------------------------------------------
 // We solve two problems here:
 // 1. Find a peak element in 1D array
@@ -9,7 +10,7 @@
 // than its neighbors (or boundary conditions if at edge).
 // -------------------------------------------------------
 
-import java.util.*;
+
 
 class Solution {
 

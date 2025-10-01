@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.Easy;
 // Problem Explanation:
     // Given an array 'nums' containing 'n' distinct numbers in the range [0, n],
     // exactly one number in this range is missing.

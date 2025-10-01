@@ -13,6 +13,32 @@ public class SmallestDivforThreshold {
     //   (n = array length, max(arr) = largest element in array)
     // Space Complexity: O(1)
 
+    /*
+Problem: Smallest Divisor Given a Threshold
+
+Given an array of positive integers `nums` and a positive integer `threshold`, 
+find the **smallest positive integer divisor** `d` such that the sum of all 
+elements in `nums` divided by `d` (rounded up) is less than or equal to `threshold`.
+
+Formally: Find the smallest `d` such that
+    ceil(nums[0]/d) + ceil(nums[1]/d) + ... + ceil(nums[n-1]/d) <= threshold
+
+Notes:
+- `ceil(a/b)` represents the smallest integer greater than or equal to `a/b`.
+- If an element is perfectly divisible by `d`, ceil does not change the result.
+- The array can have any positive integers.
+- The divisor must be at least 1.
+
+Example:
+Input: nums = [1,2,5,9], threshold = 6
+Output: 5
+Explanation:
+- Divisor 1 → sum = 1+2+5+9 = 17 > 6 (invalid)
+- Divisor 5 → sum = ceil(1/5)+ceil(2/5)+ceil(5/5)+ceil(9/5) = 1+1+1+2 = 5 <= 6 (valid)
+- 5 is the smallest such divisor.
+*/
+
+
     public static int BruteSmallestDivforThreshold(int arr[], int threshold) {
         int n = arr.length;
         int max = Integer.MIN_VALUE;
@@ -31,7 +57,7 @@ public class SmallestDivforThreshold {
                 // ceil(arr[i] / d) = (arr[i] + d - 1) / d
                 sum += (arr[i] + d - 1) / d;
             }
-            if (sum <= threshold) {  // ✅ should check sum, not d
+            if (sum <= threshold) {  //  should check sum, not d
                 return d;
             }
         }
