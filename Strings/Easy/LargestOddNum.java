@@ -50,6 +50,6 @@ public class LargestOddNum {
     // Driver code for quick test
     public static void main(String[] args) {
         String s = "35420";
-        System.out.println(maxOddNum(s)); // Output: "354"
+        System.out.println(maxOddNum(s)); // Output: "35"
     }
 }

@@ -1,6 +1,24 @@
 package Easy;
 import java.util.HashMap;
 
+
+/*
+Problem: Isomorphic Strings
+
+Two strings s and t are isomorphic if the characters in s can be replaced to get t, 
+while preserving the order of characters. Each character must map to exactly one character, 
+and no two characters may map to the same character.
+
+Example:
+s = "egg", t = "add" → true
+s = "foo", t = "bar" → false
+s = "paper", t = "title" → true
+
+Constraints:
+- 1 <= s.length, t.length <= 5 * 10^4
+- s and t consist of any valid ASCII characters
+*/
+
 public class IsIsomorphic {
 
     class Solution {
