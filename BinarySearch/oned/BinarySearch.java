@@ -1,5 +1,4 @@
-package oned;
-
+package OneD;
 public class BinarySearch {
     // Standard Binary Search function
     public static int binarySearch(int[] arr, int target) {

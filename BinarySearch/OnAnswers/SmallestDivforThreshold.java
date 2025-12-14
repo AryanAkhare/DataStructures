@@ -121,4 +121,36 @@ Explanation:
         }
         return sum;
     }
+
+
+    public int smallDiv(int[] nums,int threshold){
+        int max=Integer.MIN_VALUE;
+
+        for(int i=0;i<nums.length;i++){
+            max=Math.max(max, nums[i]);
+        }
+
+        int low=0;
+        int high=max;
+        int ans=Integer.MAX_VALUE;
+
+        while(low<=high){
+            int mid=low+(high-low)/2;
+            int sum=calcSum(nums, mid);
+            if(sum<=threshold){
+                ans=mid;low--;
+            }else{
+                high++;
+            }
+        }
+        return ans;
+    }
+
+    public int cacl(int[] num,int div){
+        int sum=0;
+        for(int i=0;i<num.length;i++){
+            sum+=(num[i]+div-1)/div;
+        }
+        return sum;
+    }
 }

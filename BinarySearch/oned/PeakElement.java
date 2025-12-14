@@ -17,7 +17,7 @@
 // Output: true (index 1 -> value 20 or index 5 -> value 90)
 //
 // --------------------------------------
-package oned;
+package OneD;
 import java.util.*;
 
 public class PeakElement {

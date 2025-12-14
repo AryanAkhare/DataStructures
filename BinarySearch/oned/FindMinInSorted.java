@@ -1,4 +1,4 @@
-package oned;
+package OneD;
 /**
  * Problem 1: Find Minimum in Rotated Sorted Array
  * -----------------------------------------------

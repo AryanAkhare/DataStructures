@@ -1,4 +1,4 @@
-package oned;
+package OneD;
 
 import java.util.ArrayList;
 

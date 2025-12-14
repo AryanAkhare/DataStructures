@@ -1,4 +1,4 @@
-package oned;
+package OneD;
 
 public class SearchElementinRotatedSortedArray {
     /*
