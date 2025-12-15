@@ -4,3 +4,6 @@
 CompileText
 *.class
 /bin/
+
+*.class
+/bin/
