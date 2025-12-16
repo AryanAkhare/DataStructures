@@ -1,4 +1,4 @@
-package LinkedList.Basics.SLL;
+
 
 /**
  * Node class represents a single node in a singly linked list
