@@ -19,8 +19,22 @@ public class SecondLargest {
         return secmax;
     }
 
+    public static int secMax(int a[]){
+        int max=a[0];
+        for(int x:a){
+            if(x>max) max=x;
+        }
+
+        int secMax=Integer.MIN_VALUE;
+        for(int x:a){
+            if(x>secMax && x!=max) secMax=x;
+        }
+        return secMax;
+    }
+
     public static void main(String[] args) {
         int[] a = {21, 4, 2, 31, 34, 1};
-        System.out.println(secondLargest(a));  //Output :31
+        System.out.println(secondLargest(a));
+        System.out.println(secMax(a));  //Output :31
     }
 }

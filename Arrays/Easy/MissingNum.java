@@ -60,16 +60,26 @@ public static int optimalMissingNumberSUM(int[] nums) {
     return sum-csum;
 
 }
-public static int optimalMissingNumberXOR(int[] nums) {
+
+public static int  misisngNum(int nums[]){
+    int xor=0;
     int n=nums.length;
-    int xor1=0;
-    
-    int xor2=0;
-    for( int i=0 ; i< n ; i++){
-        xor2^=nums[i];
-        xor1^=(i+1);
+    for(int i=0;i<n;i++){
+        xor=xor^i;
+        xor=xor^nums[i];
     }
-    return xor1^xor2;
+    return xor^n;
+}
+public static int optimalMissingNumberXOR(int[] nums) {
+    int xor = 0;
+    int n = nums.length;
+
+    for (int i = 0; i < n; i++) {
+        xor ^= i;
+        xor ^= nums[i];
+    }
+
+    return xor ^ n;
 
 }
 

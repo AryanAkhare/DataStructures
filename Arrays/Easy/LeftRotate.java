@@ -22,6 +22,23 @@ public class LeftRotate {
             j--;
         }
     }
+
+    public static void revItOJ(int arr[],int i,int j){
+        j--;
+        while(i<j){
+            int temp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;
+            i++;j--;
+        }
+    }
+
+    public static void leftRotateByK(int arr[],int k){
+        k=k%arr.length;
+        revItOJ(arr,0,k);
+        revItOJ(arr,k,arr.length);
+        revItOJ(arr,0,arr.length);
+    }
     public static void leftRotateByKPlace(int arr[],int k){
         k=k%arr.length; //imp step
         revFromItoJ(arr, 0, k);
@@ -40,11 +57,14 @@ public class LeftRotate {
 
     public static void main(String[] args) {
         int a[]={1,2,3,4,5};
+        int c[]={1,2,3,4,5};
         int k=7;
         //leftRotateByOnePlace(a);
         leftRotateByKPlace(a,k);
         System.out.print(Arrays.toString(a))
         ;
+        leftRotateByKPlace(c,k);
+        System.out.println(Arrays.toString(c));
         int b[]=a.clone();
         RightRotateByKPlace(b,k);
         System.out.println(Arrays.toString(b));

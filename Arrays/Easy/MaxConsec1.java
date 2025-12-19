@@ -25,4 +25,20 @@ public class MaxConsec1 {
 
         return maxi; // return the longest streak found
     }
+
+    public static int max1(int arr[]){
+        int maxi=0; //global counter
+        int curr=0; //curr counter
+        int n=arr.length;
+        for(int i=0;i<n;i++){
+            if(arr[i]==1){
+                curr++;
+                maxi=Math.max(maxi,curr);
+            }
+            else{
+                curr=0; //restart
+            }
+        }
+        return maxi;
+    }
 }

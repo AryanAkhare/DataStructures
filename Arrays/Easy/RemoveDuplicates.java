@@ -33,6 +33,18 @@ public class RemoveDuplicates {
         return i+1;
     }
 
+    public static int removeDuplicates1(int nums[]){
+        int i=0;
+        int n=nums.length;
+        for(int j=0;j<n;j++){
+            if(nums[i]!=nums[j]){
+                nums[i+1]=nums[j];
+                i++;
+            }
+        }
+        return i+1;
+    }
+
     
     public static void main(String[] args) {
         int a[]={1,1,2};

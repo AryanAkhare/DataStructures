@@ -1,5 +1,7 @@
 package Arrays.Easy;
 
+import static java.util.Objects.requireNonNull;
+
 // LEETCODE-1752
 // Problem: Check if an array is sorted (non-decreasing) and rotated at most once.
 // A rotation means shifting elements circularly, e.g. [3,4,5,1,2] is a rotated version of [1,2,3,4,5].
@@ -25,6 +27,16 @@ public class SortedandRotated {
         }
 
         // If we see at most one break, it's sorted and rotated
+        return true;
+    }
+
+    public static boolean checkSortedAndRotated(int a[]){
+        int c=0;
+        int n=a.length;
+        for(int i=0;i<n;i++){
+            if(a[i]>a[(i+1)%n]) c++;
+            if(c>1) return false;
+        }
         return true;
     }
 

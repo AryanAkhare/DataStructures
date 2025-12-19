@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.Hard;
 import java.security.Key;
 import java.util.HashMap;
 
