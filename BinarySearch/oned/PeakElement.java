@@ -72,6 +72,20 @@ public class PeakElement {
     // ---------------------------------------------------
     // Driver code (for testing)
     // ---------------------------------------------------
+    public  int peak(int[] arr){
+
+        int low=0;
+        int high=arr.length-1;
+
+        while(low<=high){
+            int mid=low+(high-low)/2;
+            if(arr[mid]<arr[mid+1]) low=mid+1;
+            else high=mid;
+
+        }
+        return low;
+    }
+
     public static void main(String[] args) {
         PeakElement obj = new PeakElement();
 
@@ -80,6 +94,9 @@ public class PeakElement {
 
         System.out.println("All peaks in arr1: " + obj.findPeaks(arr1));
         System.out.println("Any one peak in arr1: index " + obj.findPeakElement(arr1));
+
+        System.out.println("All peaks in arr1: " + obj.findPeaks(arr1));
+        System.out.println("Any one peak in arr1: index " + obj.peak(arr1));
 
         System.out.println("All peaks in arr2: " + obj.findPeaks(arr2));
         System.out.println("Any one peak in arr2: index " + obj.findPeakElement(arr2));

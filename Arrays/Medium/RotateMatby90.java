@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.Medium;
 
 public class RotateMatby90 {
 
@@ -20,6 +20,18 @@ public class RotateMatby90 {
         for (int i = 0; i < n; i++) {
             reverseArray(mat[i]);
         }
+    }
+    public static void rotateby90optimal(int[][] mat){
+        int n=mat.length;
+
+        for(int i=0;i<n;i++){
+            for(int j=i+1;j<n;j++){
+                int temp = mat[i][j];
+                mat[i][j] = mat[j][i];
+                mat[j][i] = temp;
+            }
+        }
+        for(int i=0;i<n;i++) reverseArray(mat[i]);
     }
 
     // ✅ Rotate matrix 90 degrees ANTI-CLOCKWISE

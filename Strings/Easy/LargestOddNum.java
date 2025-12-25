@@ -9,7 +9,7 @@ package Easy;
  *
  * Example:
  * Input: s = "35420"
- * Output: "354"
+ * Output: "35"
  *
  * ----------------------------------------------------------
  * Brute Force:

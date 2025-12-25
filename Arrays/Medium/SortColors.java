@@ -49,7 +49,7 @@ public class SortColors {
         int low = 0, mid = 0, high = nums.length - 1;
 
         /*
-         * 🧠 Intuition (Dutch National Flag):
+         * Intuition (Dutch National Flag):
          * We maintain 3 partitions:
          * - [0...low-1] → All 0s (red)
          * - [low...mid-1] → All 1s (white)

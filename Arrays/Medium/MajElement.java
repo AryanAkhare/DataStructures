@@ -20,8 +20,21 @@
  *     - Else, decrease count.
  * - The remaining candidate will be the majority element.
  */
-package Arrays;
+package Arrays.Medium;
+
+
 public class MajElement {
+
+    public static int majElement(int[] nums){
+        int count=0;
+        int candidate=0;
+        for(int i=0;i<nums.length;i++){
+            if(count==0) candidate=nums[i];
+            if(nums[i]==candidate) count++;
+            else count--;
+        }
+        return candidate;
+    }
 
    public static int majorityElement(int[] nums) {
     // int count = 0;
@@ -52,6 +65,9 @@ public class MajElement {
     }
 
     return candidate;
+
+
+    
 }
 
 
