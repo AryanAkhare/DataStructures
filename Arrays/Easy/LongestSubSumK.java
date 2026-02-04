@@ -129,7 +129,7 @@ public class LongestSubSumK {
      * - If (currentSum - k) has occurred before, then add its count to total.
      */
 //     Key: Integer → The prefix sum
-// 📌 Value: Integer → The count (frequency) of how many times that prefix sum has occurred
+//  Value: Integer → The count (frequency) of how many times that prefix sum has occurred
 
     public static int CountAllSubarraysWithSumK(int[] a, int k) {
         HashMap<Integer, Integer> map = new HashMap<>();
