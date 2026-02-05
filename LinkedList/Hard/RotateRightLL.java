@@ -1,6 +1,9 @@
+package Hard;
+
+
 public class RotateRightLL {
 
-    /*
+    
     class Node {
         int data;
         Node next;
@@ -10,7 +13,7 @@ public class RotateRightLL {
             next = null;
         }
     }
-    */
+    
 
     class Solution {
 
