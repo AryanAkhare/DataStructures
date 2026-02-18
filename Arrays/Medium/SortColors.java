@@ -44,7 +44,7 @@ public class SortColors {
         arr[j] = temp;
     }
 
-    // ✅ Optimal approach using Dutch National Flag algorithm (1-pass, O(N), O(1) space)
+    // Optimal approach using Dutch National Flag algorithm (1-pass, O(N), O(1) space)
     public static int[] optimalColorSort(int[] nums) {
         int low = 0, mid = 0, high = nums.length - 1;
 

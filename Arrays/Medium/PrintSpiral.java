@@ -39,19 +39,19 @@ public class PrintSpiral {
         // Traverse until all layers are covered
         while (top <= bottom && left <= right) {
 
-            // 1️⃣ Traverse from Left → Right on the Top row
+            // 1️ Traverse from Left → Right on the Top row
             for (int i = left; i <= right; i++) {
                 ans.add(mat[top][i]);
             }
             top++;  // Top row done, move boundary down
 
-            // 2️⃣ Traverse from Top → Bottom on the Rightmost column
+            // 2️ Traverse from Top → Bottom on the Rightmost column
             for (int i = top; i <= bottom; i++) {
                 ans.add(mat[i][right]);
             }
             right--;  // Rightmost column done, move boundary left
 
-            // 3️⃣ Traverse from Right → Left on the Bottom row (if still valid)
+            // 3️traverse from Right → Left on the Bottom row (if still valid)
             if (top <= bottom) {
                 for (int i = right; i >= left; i--) {
                     ans.add(mat[bottom][i]);
