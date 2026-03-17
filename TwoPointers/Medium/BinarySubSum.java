@@ -156,7 +156,6 @@ class Solution {
                 sum -= nums[left];
                 left++;
             }
-
             /*
             All subarrays ending at 'right' with start from
             left to right are valid.
